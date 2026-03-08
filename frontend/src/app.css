@@ -1,0 +1,8 @@
+@import 'tailwindcss';
+
+:root {
+  --color-below: #ef4444;
+  --color-approaching: #f59e0b;
+  --color-proficient: #22c55e;
+  --color-exemplary: #3b82f6;
+}
