@@ -1,0 +1,214 @@
+[
+  {
+    "id": "6-trait-writing",
+    "name": "6-Trait Writing Rubric",
+    "description": "A comprehensive writing assessment rubric based on the 6+1 Traits of Writing model, evaluating ideas, organization, voice, word choice, sentence fluency, and conventions.",
+    "grade_range": "6-12",
+    "dimensions": [
+      {
+        "name": "Ideas",
+        "levels": {
+          "Exemplary": "The writing is clear, focused, and richly developed with specific, relevant details and examples that go beyond the obvious. The writer demonstrates deep understanding of the topic and presents original thinking that engages the reader throughout.",
+          "Proficient": "The writing is clear and focused with adequate development. Supporting details are relevant and fairly specific, though they may occasionally be general. The writer stays on topic and demonstrates a solid understanding of the subject.",
+          "Approaching": "The writing attempts to address the topic but development is limited or uneven. Some details are present but may be too general, repetitive, or loosely connected to the main idea. The reader is left with questions.",
+          "Below": "The writing lacks a clear central idea or purpose. Details are minimal, absent, or unrelated to the topic. The reader cannot determine the writer's main point or the piece feels like a collection of random thoughts."
+        }
+      },
+      {
+        "name": "Organization",
+        "levels": {
+          "Exemplary": "The structure enhances and showcases the central idea. The order and pacing feel natural and effective. Transitions are smooth and connect ideas logically. The introduction hooks the reader and the conclusion provides satisfying closure.",
+          "Proficient": "The writing has a recognizable structure with a clear beginning, middle, and end. Transitions are present and generally effective. The sequence of ideas is logical, though pacing may occasionally lag or rush.",
+          "Approaching": "An attempt at organization is evident, but the structure may feel formulaic, inconsistent, or incomplete. Transitions are weak or missing in places. The reader may have to re-read to follow the sequence of ideas.",
+          "Below": "The writing lacks a clear organizational structure. There is no discernible beginning, middle, or end. Ideas seem randomly arranged. Transitions are absent, making it difficult to follow the writer's train of thought."
+        }
+      },
+      {
+        "name": "Voice",
+        "levels": {
+          "Exemplary": "The writing is expressive, engaging, and authentic. The writer's personality and conviction come through clearly. The tone is appropriate for the audience and purpose, and the reader feels a strong connection to the writer.",
+          "Proficient": "The writing is pleasant and generally engaging. The writer seems genuine and aware of the audience. The tone is mostly appropriate, and the writer's personality comes through in places, though it may fade occasionally.",
+          "Approaching": "The writing shows moments of voice but is often flat, generic, or inconsistent. The writer may seem disengaged from the topic or unsure of the audience. The tone may shift awkwardly or feel forced.",
+          "Below": "The writing is lifeless, mechanical, or disconnected. There is no sense of the writer behind the words. The tone is flat or inappropriate for the purpose. The writing could have been produced by anyone — or no one."
+        }
+      },
+      {
+        "name": "Word Choice",
+        "levels": {
+          "Exemplary": "Words are precise, vivid, and natural. The writer uses strong verbs, specific nouns, and effective modifiers that create clear images and convey meaning with power and clarity. Language feels fresh without being overdone.",
+          "Proficient": "Words are generally correct and adequate. The writer makes some effective word choices that clarify meaning. Language is functional and mostly specific, though some words may be ordinary or occasionally imprecise.",
+          "Approaching": "Words are often vague, general, or repetitive. The writer relies on familiar or overused language. Some words may be used incorrectly or awkwardly, and the vocabulary feels limited for the grade level.",
+          "Below": "Words are consistently vague, incorrect, or confusing. The limited vocabulary makes it hard to understand the message. Words may be misused, and the language feels immature or careless."
+        }
+      },
+      {
+        "name": "Sentence Fluency",
+        "levels": {
+          "Exemplary": "The writing flows smoothly with varied sentence structures, lengths, and beginnings. Sentences are well-crafted and rhythmic. The text invites expressive oral reading and moves naturally from one idea to the next.",
+          "Proficient": "The writing generally flows well. Sentence structures are mostly varied, and the text reads smoothly for the most part. Some sentences may follow similar patterns, but awkwardness is rare.",
+          "Approaching": "The writing tends to be mechanical or choppy. Sentence patterns are repetitive, and many sentences begin the same way. Some sentences may be run-ons or fragments that disrupt the flow.",
+          "Below": "The writing is difficult to read aloud. Sentences are incomplete, rambling, or awkwardly constructed. The reader must re-read to make sense of the text. There is no variation in sentence structure."
+        }
+      },
+      {
+        "name": "Conventions",
+        "levels": {
+          "Exemplary": "The writing demonstrates strong control of standard conventions (spelling, punctuation, capitalization, grammar, paragraphing). Errors are few and minor. The writer may manipulate conventions for stylistic effect.",
+          "Proficient": "The writing shows reasonable control of conventions. Errors are few and do not interfere with readability. Spelling is generally correct on common words, punctuation is mostly accurate, and paragraphing is present.",
+          "Approaching": "The writing shows limited control of conventions. Errors in spelling, punctuation, capitalization, or grammar are noticeable and begin to interfere with readability. Paragraphing may be irregular.",
+          "Below": "Numerous errors in conventions make the writing difficult to read. Spelling, punctuation, capitalization, and grammar errors are frequent and severe. The reader must struggle to get through the text."
+        }
+      }
+    ]
+  },
+  {
+    "id": "argumentative-persuasive",
+    "name": "Argumentative/Persuasive Writing Rubric",
+    "description": "Evaluates persuasive and argumentative essays on the strength of claims, evidence, counterargument handling, organization, and conventions.",
+    "grade_range": "6-10",
+    "dimensions": [
+      {
+        "name": "Claim/Thesis",
+        "levels": {
+          "Exemplary": "Presents a clear, compelling, and arguable thesis that takes a strong, specific position on the issue. The claim is nuanced and demonstrates sophisticated thinking about the complexity of the topic.",
+          "Proficient": "Presents a clear thesis that takes a definite position on the issue. The claim is specific enough to be arguable and provides direction for the essay, though it may lack nuance.",
+          "Approaching": "A position is stated but may be vague, overly broad, or not clearly arguable. The thesis may be a statement of fact rather than an arguable claim, or it may be buried within the text.",
+          "Below": "No clear thesis or position is identifiable. The writing may present multiple contradictory positions or fail to take a stance on the issue entirely."
+        }
+      },
+      {
+        "name": "Evidence and Reasoning",
+        "levels": {
+          "Exemplary": "Provides multiple pieces of strong, relevant evidence from credible sources. Reasoning clearly and logically connects each piece of evidence to the claim. Analysis is thorough and demonstrates critical thinking.",
+          "Proficient": "Provides sufficient evidence to support the claim, mostly from appropriate sources. Reasoning connects evidence to the claim, though some connections may be more implicit than explicit.",
+          "Approaching": "Some evidence is provided but it may be insufficient, irrelevant, or from questionable sources. Reasoning is weak — evidence may be listed without clear explanation of how it supports the claim.",
+          "Below": "Little or no evidence is provided. The writer relies on personal opinion without factual support. When evidence is present, it may contradict the claim or lack any connecting reasoning."
+        }
+      },
+      {
+        "name": "Counterargument",
+        "levels": {
+          "Exemplary": "Thoughtfully addresses significant counterarguments and provides convincing rebuttals. Demonstrates understanding of opposing viewpoints while strengthening the original claim through refutation.",
+          "Proficient": "Acknowledges at least one counterargument and provides a reasonable response or rebuttal. The writer shows awareness that other perspectives exist on the issue.",
+          "Approaching": "Makes a brief or superficial mention of an opposing view but does not meaningfully address or refute it. The counterargument section feels like an afterthought.",
+          "Below": "No counterarguments are acknowledged. The writer appears unaware of or unwilling to consider opposing viewpoints. The argument feels one-sided and incomplete."
+        }
+      },
+      {
+        "name": "Organization",
+        "levels": {
+          "Exemplary": "The argument is structured strategically for maximum persuasive impact. Ideas build logically, transitions guide the reader smoothly between points, and the introduction and conclusion are compelling.",
+          "Proficient": "The essay follows a logical structure with an introduction, body paragraphs, and conclusion. Transitions are present between major sections. The argument is easy to follow.",
+          "Approaching": "Some structure is present but may be inconsistent. Paragraphing is uneven, transitions are weak or missing, and the reader may struggle to follow the progression of the argument.",
+          "Below": "The writing lacks organizational structure. Ideas are presented randomly without logical grouping. There are no clear transitions, and it is difficult to identify where one point ends and another begins."
+        }
+      },
+      {
+        "name": "Conventions",
+        "levels": {
+          "Exemplary": "Writing demonstrates strong command of grammar, spelling, punctuation, and academic formatting. Errors are rare and do not distract. Academic tone is maintained consistently throughout.",
+          "Proficient": "Writing shows solid control of conventions with minor errors that do not impede understanding. The tone is generally appropriate for academic writing.",
+          "Approaching": "Errors in grammar, spelling, or punctuation are noticeable and occasionally impede understanding. The tone may shift between formal and informal inconsistently.",
+          "Below": "Frequent errors in grammar, spelling, and punctuation significantly impede readability. The writing lacks academic tone and may include texting language, slang, or other informal elements."
+        }
+      }
+    ]
+  },
+  {
+    "id": "narrative-elementary",
+    "name": "Narrative Writing Rubric (Elementary)",
+    "description": "An age-appropriate rubric for evaluating narrative and creative story writing at the elementary level, focusing on story structure, characters, descriptive language, and basic conventions.",
+    "grade_range": "3-5",
+    "dimensions": [
+      {
+        "name": "Story Structure",
+        "levels": {
+          "Exemplary": "The story has a clear and engaging beginning that draws the reader in, a well-developed middle with a problem or challenge, and a satisfying ending that wraps things up. Events happen in an order that makes sense and the story feels complete.",
+          "Proficient": "The story has a beginning, middle, and end. There is a problem or event in the story. Events are mostly in order and the story makes sense, though the ending may feel rushed or simple.",
+          "Approaching": "The story has some parts of a beginning, middle, or end but may be missing one section or the events jump around. The reader may be confused about what happens and when.",
+          "Below": "The story is hard to follow. It may be missing a beginning or ending. Events do not seem to go in any order, or the writing is just a list of things that happened without a real story."
+        }
+      },
+      {
+        "name": "Character Development",
+        "levels": {
+          "Exemplary": "Characters feel real and interesting. The reader learns about characters through their actions, words, thoughts, and feelings. The main character changes or learns something by the end of the story.",
+          "Proficient": "Characters are named and described. The reader knows some things about how the main character feels or acts. Characters fit the story, though they may not be fully developed.",
+          "Approaching": "Characters are mentioned but the reader does not learn much about them. Characters may be named but have no description of how they look, feel, or act. It is hard to tell characters apart.",
+          "Below": "Characters are not developed. They may not be named or described at all. The reader cannot picture the characters or understand who they are."
+        }
+      },
+      {
+        "name": "Descriptive Language",
+        "levels": {
+          "Exemplary": "The writing uses vivid words that help the reader see, hear, and feel what is happening. The writer uses similes, strong verbs, and specific details to paint a picture with words.",
+          "Proficient": "The writing includes some descriptive words and details that help the reader imagine the story. The writer uses some interesting word choices, though description may be uneven.",
+          "Approaching": "The writing has few descriptive details. The writer tells what happened but does not help the reader picture it. Word choices are basic and repeated often.",
+          "Below": "There is little or no descriptive language. The writing is a bare telling of events with no details to help the reader imagine the story."
+        }
+      },
+      {
+        "name": "Spelling and Grammar",
+        "levels": {
+          "Exemplary": "Spelling is correct on grade-level words and most harder words. Sentences are complete and use correct punctuation. Capital letters are used correctly. The writing is easy to read.",
+          "Proficient": "Most grade-level words are spelled correctly. Sentences are mostly complete with correct end punctuation. Some errors are present but the writing is still easy to understand.",
+          "Approaching": "Several spelling errors are present, including some grade-level words. Some sentences may be incomplete or run together. Errors make parts of the writing harder to read.",
+          "Below": "Many words are misspelled, including common grade-level words. Sentences are often incomplete or hard to understand. Punctuation and capitalization are frequently missing or incorrect."
+        }
+      }
+    ]
+  },
+  {
+    "id": "informational-explanatory",
+    "name": "Informational/Explanatory Writing Rubric",
+    "description": "Assesses informational and explanatory writing on topic development, text structure, academic language use, source integration, and conventions.",
+    "grade_range": "6-10",
+    "dimensions": [
+      {
+        "name": "Topic Development",
+        "levels": {
+          "Exemplary": "The topic is thoroughly and insightfully developed with well-chosen, relevant facts, concrete details, extended definitions, and quotations. The writer demonstrates expert knowledge and helps the reader gain a deep understanding of the subject.",
+          "Proficient": "The topic is adequately developed with relevant facts, definitions, details, and examples. The writer demonstrates solid understanding of the subject and provides enough information for the reader to learn about the topic.",
+          "Approaching": "The topic is partially developed. Some facts or details are present but they may be insufficient, superficial, or loosely related to the topic. The reader is left with significant gaps in understanding.",
+          "Below": "The topic is minimally developed or undeveloped. Facts and details are missing, irrelevant, or inaccurate. The reader does not gain meaningful understanding of the subject."
+        }
+      },
+      {
+        "name": "Text Structure",
+        "levels": {
+          "Exemplary": "The writing uses an effective organizational structure (e.g., cause/effect, compare/contrast, chronological) that suits the topic. Headings, formatting, or clear paragraphing guide the reader. Transitions create cohesion between sections and ideas.",
+          "Proficient": "The writing follows a clear organizational pattern with an introduction, body, and conclusion. Paragraphing separates major ideas. Transitions connect ideas, though some may be formulaic.",
+          "Approaching": "Some organizational structure is evident but may be inconsistent or poorly suited to the topic. Paragraphing is uneven and transitions are weak or absent in places.",
+          "Below": "The writing has no clear organizational structure. Information is presented randomly without logical grouping. Paragraphing and transitions are absent."
+        }
+      },
+      {
+        "name": "Academic Language",
+        "levels": {
+          "Exemplary": "The writing consistently uses precise, domain-specific vocabulary appropriate to the topic. Technical terms are defined or used in context. The tone is consistently formal and objective, and language choices enhance clarity.",
+          "Proficient": "The writing uses some domain-specific vocabulary and generally maintains an academic tone. Key terms are mostly used correctly, though language may occasionally be imprecise or informal.",
+          "Approaching": "Limited domain-specific vocabulary is used. The writer may rely on vague or general language instead of precise terms. The tone shifts between formal and informal inconsistently.",
+          "Below": "No domain-specific vocabulary is used. Language is vague, informal, or conversational throughout. The writing does not sound like an informational text."
+        }
+      },
+      {
+        "name": "Use of Sources",
+        "levels": {
+          "Exemplary": "Information from sources is skillfully integrated into the text through paraphrasing and direct quotation. Sources are clearly cited or attributed. The writer synthesizes information from multiple sources to build a comprehensive explanation.",
+          "Proficient": "Information from sources is included and generally well-integrated. Sources are identified or credited. The writer paraphrases most information rather than over-relying on direct quotes.",
+          "Approaching": "Some information appears to come from sources but integration is clumsy — text may be copied without paraphrasing or quotes may be dropped in without context. Source attribution is inconsistent.",
+          "Below": "Sources are not used, not cited, or information appears to be fabricated. The writing relies entirely on the writer's limited knowledge without reference to external information."
+        }
+      },
+      {
+        "name": "Conventions",
+        "levels": {
+          "Exemplary": "The writing demonstrates strong control of spelling, grammar, punctuation, and capitalization. Errors are minimal and do not interfere with meaning. Formatting supports readability.",
+          "Proficient": "The writing shows reasonable control of conventions. Errors are present but infrequent and do not impede understanding. Basic formatting is used appropriately.",
+          "Approaching": "Errors in spelling, grammar, or punctuation are noticeable and occasionally interfere with meaning. Formatting may be inconsistent or absent.",
+          "Below": "Frequent and severe errors in conventions make the writing difficult to read and understand. Basic formatting is absent."
+        }
+      }
+    ]
+  }
+]
