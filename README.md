@@ -40,6 +40,18 @@ Teachers need to calibrate their grading against rubrics, but obtaining a divers
 6. **Deployable:** The backend runs on Cloud Run and the frontend is hosted on Firebase Hosting, both accessible via public URLs.
 7. **Portfolio-Ready:** The project README, architecture docs, and live demo clearly communicate the engineering decisions to a technical reviewer.
 
+## Security & Cost Protection
+
+The Cloud Run service is `--allow-unauthenticated` (the SvelteKit SPA has no login). Defenses against cost-runaway abuse of the Gemini 3.1 Pro endpoint:
+
+- **Per-IP rate limit** on `POST /api/v1/generate` via `slowapi`: **5/minute** + **50/day** per real client IP (resolved from `X-Forwarded-For`). HTTP 429 on hit.
+- **`--max-instances=1`** on the Cloud Run service so the in-memory rate-limit bucket is consistent and compute spend is hard-capped.
+- **CORS allow-list** (`ALLOWED_ORIGINS`) defaulted to non-permissive; production sets only the deployed Firebase site origins.
+- **OpenAPI docs disabled in production** (`DOCS_ENABLED=false`); `/docs`, `/redoc`, `/openapi.json` return 404.
+- **GCP budget alert** at the project level (separate from this repo).
+
+See `backend/app/rate_limit.py` for the limiter and `backend/app/main.py` for the wiring.
+
 ## Documentation
 
 | Document | Description |
