@@ -17,7 +17,7 @@ class GenerationError(Exception):
 _client = genai.Client(
     vertexai=True,
     project=settings.GCP_PROJECT_ID,
-    location=settings.GCP_REGION,
+    location=settings.GEMINI_LOCATION,
 )
 
 
