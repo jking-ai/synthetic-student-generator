@@ -15,7 +15,7 @@ graph TB
     end
 
     subgraph "Vertex AI"
-        Gemini["Gemini 2.5 Flash<br/>via Google Gen AI SDK"]
+        Gemini["Gemini 3.1 Pro<br/>via Google Gen AI SDK"]
     end
 
     User -->|"HTTPS"| FE
@@ -31,7 +31,7 @@ graph TB
 | **Backend API** | FastAPI | 0.115+ | Async-first Python framework with built-in OpenAPI docs, Pydantic integration for request/response validation, and minimal boilerplate |
 | **Runtime** | Python | 3.13 | Current stable release with full ecosystem support; required by modern FastAPI and google-genai |
 | **LLM Access** | Google Gen AI SDK (`google-genai`) | 1.x (latest) | Replaces the deprecated `vertexai.generative_models` module; unified SDK for both Gemini API and Vertex AI; supports structured output natively |
-| **LLM Model** | Gemini 2.5 Flash | `gemini-2.5-flash` | GA on Vertex AI; fast inference, low cost, 1M token context window; supports JSON response schema enforcement |
+| **LLM Model** | Gemini 3.1 Pro | `gemini-3.1-pro-preview` | Preview on Vertex AI; stronger reasoning for persona modeling and rubric parsing; 1M token context window; supports JSON response schema enforcement |
 | **Frontend** | SvelteKit | 2.x (Svelte 5) | Lightweight SPA with file-based routing, static adapter for Firebase Hosting; adds framework variety to portfolio (alongside React and Astro projects) |
 | **Frontend Tooling** | Vite | 6.x | Fast dev server with HMR; optimized production builds; first-class Svelte support |
 | **Frontend Hosting** | Firebase Hosting | N/A | CDN-backed static hosting with custom domain support; already configured in user's GCP project |
@@ -50,7 +50,7 @@ sequenceDiagram
     participant U as User Browser
     participant FE as SvelteKit Frontend
     participant API as FastAPI (Cloud Run)
-    participant LLM as Gemini 2.5 Flash
+    participant LLM as Gemini 3.1 Pro
 
     U->>FE: Configure rubric + assignment + select proficiency levels
     FE->>API: POST /api/v1/generate (one per proficiency level, in parallel)
@@ -84,7 +84,7 @@ sequenceDiagram
 
 **Decision:** Use Gemini's native `response_schema` parameter rather than post-hoc JSON parsing.
 
-**Rationale:** Gemini 2.5 Flash supports constrained decoding with a JSON schema. By passing a `response_schema` to the API call, the model is forced to produce valid JSON matching the schema. This eliminates regex-based extraction or retry loops for malformed JSON. The schema is defined once as a Pydantic model and converted to the format expected by the Gen AI SDK.
+**Rationale:** Gemini 3.1 Pro supports constrained decoding with a JSON schema. By passing a `response_schema` to the API call, the model is forced to produce valid JSON matching the schema. This eliminates regex-based extraction or retry loops for malformed JSON. The schema is defined once as a Pydantic model and converted to the format expected by the Gen AI SDK.
 
 **Implementation:**
 - Define a Pydantic model (`GeneratedSampleOutput`) with fields: `student_response`, `proficiency_scores`, `persona_notes`, `writing_traits`.

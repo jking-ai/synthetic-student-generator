@@ -14,7 +14,7 @@
 - Python 3.13 project initialized with `requirements.txt` containing: `fastapi[standard]>=0.115`, `google-genai>=1.0`, `pydantic>=2.0`, `pydantic-settings>=2.0`, `uvicorn>=0.34`
 - `Dockerfile` builds and runs locally with `docker build -t ssg-backend . && docker run -p 8000:8000 ssg-backend`
 - `app/main.py` creates a FastAPI app instance with CORS middleware configured for `localhost:5173` and a placeholder production origin
-- `app/config.py` loads settings from environment variables: `GCP_PROJECT_ID`, `GCP_REGION` (default: `us-central1`), `GEMINI_MODEL` (default: `gemini-2.5-flash`)
+- `app/config.py` loads settings from environment variables: `GCP_PROJECT_ID`, `GCP_REGION` (default: `us-central1`), `GEMINI_MODEL` (default: `gemini-3.1-pro-preview`)
 - `GET /api/v1/health` returns the health response JSON as defined in api-contracts.md
 - Running `uvicorn app.main:app --reload` starts the server without errors
 
@@ -22,7 +22,7 @@
 
 **Acceptance criteria:**
 - `app/services/gemini_client.py` initializes the `google-genai` client configured for Vertex AI (`vertexai=True`, project and location from config)
-- A standalone test script (`scripts/test_gemini.py`) sends a simple prompt to Gemini 2.5 Flash and prints the response, confirming authentication works
+- A standalone test script (`scripts/test_gemini.py`) sends a simple prompt to Gemini 3.1 Pro and prints the response, confirming authentication works
 - The client supports passing `response_mime_type="application/json"` and a `response_schema` dict to enforce structured output
 - Error handling wraps SDK exceptions and raises a custom `GenerationError` with the original error message
 

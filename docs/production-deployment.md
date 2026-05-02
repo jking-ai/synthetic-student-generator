@@ -12,7 +12,7 @@ How to deploy and operate the application on Google Cloud Platform.
 |----------|---------|---------|
 | Backend API | Cloud Run | `synthetic-student-generator` in `us-central1` |
 | Frontend | Firebase Hosting | Static SPA served via CDN |
-| LLM | Vertex AI | Gemini 2.5 Flash (`gemini-2.5-flash`) |
+| LLM | Vertex AI | Gemini 3.1 Pro Preview (`gemini-3.1-pro-preview`) |
 | Container Registry | Artifact Registry | Docker images for Cloud Run |
 
 ### Required IAM Roles

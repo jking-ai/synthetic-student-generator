@@ -8,7 +8,7 @@ Synthetic Student Generator is a web application that generates calibration sets
 
 - **Backend:** FastAPI 0.115+ (Python 3.13) on Cloud Run
 - **Frontend:** SvelteKit 2 + Vite SPA on Firebase Hosting
-- **LLM:** Gemini 2.5 Flash via Google Gen AI SDK 1.x (structured JSON output)
+- **LLM:** Gemini 3.1 Pro (preview) via Google Gen AI SDK 1.x (structured JSON output)
 - **Data:** No database -- rubric templates are bundled JSON; generated samples are ephemeral
 
 **Status:** Pre-build (planning docs only, no code yet).
@@ -43,7 +43,7 @@ bash scripts/deploy.sh frontend    # Deploy frontend to Firebase Hosting only
 ## Architecture
 
 ### Request Flow
-`Browser` -> `Firebase Hosting (SvelteKit SPA)` -> `Firebase Cloud Function (API Proxy)` -> `FastAPI (Cloud Run)` -> `Google Gen AI SDK` -> `Gemini 2.5 Flash` -> Structured JSON response -> `Frontend renders sample`
+`Browser` -> `Firebase Hosting (SvelteKit SPA)` -> `Firebase Cloud Function (API Proxy)` -> `FastAPI (Cloud Run)` -> `Google Gen AI SDK` -> `Gemini 3.1 Pro` -> Structured JSON response -> `Frontend renders sample`
 
 ### Key Design Decisions
 - **Calibration set as primary workflow:** Frontend sends parallel individual `POST /api/v1/generate` requests (one per proficiency level) and assembles results in a tabbed view. No batch endpoint needed.
@@ -67,7 +67,7 @@ cp .env.example .env
 # Required variables:
 #   GCP_PROJECT_ID=your-gcp-project-id
 #   GCP_REGION=us-central1 (default)
-#   GEMINI_MODEL=gemini-2.5-flash (default)
+#   GEMINI_MODEL=gemini-3.1-pro-preview (default)
 ```
 
 Backend requires GCP credentials for Vertex AI Gemini. For local development, configure application default credentials or a service account key. In production, Cloud Run's service account (with "Vertex AI User" role) provides implicit auth.

@@ -7,7 +7,7 @@ from pydantic_settings import BaseSettings
 class Settings(BaseSettings):
     GCP_PROJECT_ID: str = "your-gcp-project-id"
     GCP_REGION: str = "us-central1"
-    GEMINI_MODEL: str = "gemini-2.5-flash"
+    GEMINI_MODEL: str = "gemini-3.1-pro-preview"
     FRONTEND_ORIGIN: str = "http://localhost:5173"
     GOOGLE_APPLICATION_CREDENTIALS: Optional[str] = None
 

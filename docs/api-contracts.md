@@ -62,7 +62,7 @@ Returns service status and metadata. Used by Cloud Run health checks and fronten
   "status": "healthy",
   "service": "synthetic-student-generator",
   "version": "1.0.0",
-  "model": "gemini-2.5-flash"
+  "model": "gemini-3.1-pro-preview"
 }
 ```
 
@@ -301,7 +301,7 @@ Generate a synthetic student work sample based on a rubric, assignment prompt, a
     }
   },
   "metadata": {
-    "model": "gemini-2.5-flash",
+    "model": "gemini-3.1-pro-preview",
     "generation_time_ms": 3420,
     "template_used": "6-trait-writing",
     "request_id": "req_a1b2c3d4e5f6"
@@ -337,7 +337,7 @@ Generate a synthetic student work sample based on a rubric, assignment prompt, a
     "details": [
       {
         "reason": "Response did not conform to expected JSON schema.",
-        "model": "gemini-2.5-flash"
+        "model": "gemini-3.1-pro-preview"
       }
     ]
   }

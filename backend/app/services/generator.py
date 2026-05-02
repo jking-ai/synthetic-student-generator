@@ -111,15 +111,15 @@ async def generate_sample(request: GenerateRequest) -> GenerateResponse:
     sample = GeneratedSample(**result.content)
 
     # Step 5: Build token usage with cost estimate
-    # Gemini 2.5 Flash pricing (per 1M tokens):
-    #   Input: $0.15, Output: $0.60, Thinking: $0.35
+    # Gemini 3.1 Pro Preview pricing (per 1M tokens, prompts ≤200K):
+    #   Input: $2.00, Output (response and reasoning): $12.00
     usage = result.usage
     token_usage = None
     if usage:
         cost = (
-            usage.get("prompt_tokens", 0) * 0.15 / 1_000_000
-            + usage.get("completion_tokens", 0) * 0.60 / 1_000_000
-            + usage.get("thinking_tokens", 0) * 0.35 / 1_000_000
+            usage.get("prompt_tokens", 0) * 2.00 / 1_000_000
+            + usage.get("completion_tokens", 0) * 12.00 / 1_000_000
+            + usage.get("thinking_tokens", 0) * 12.00 / 1_000_000
         )
         token_usage = TokenUsage(
             prompt_tokens=usage.get("prompt_tokens", 0),
