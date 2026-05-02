@@ -62,15 +62,30 @@ bash scripts/deploy.sh frontend    # Deploy frontend to Firebase Hosting only
 ## Environment Setup
 
 ```bash
-# TODO: Add environment setup once project is scaffolded
-cp .env.example .env
+cp backend/.env.example backend/.env
 # Required variables:
 #   GCP_PROJECT_ID=your-gcp-project-id
 #   GCP_REGION=us-central1 (default)
 #   GEMINI_MODEL=gemini-3.1-pro-preview (default)
+# Optional / security:
+#   ALLOWED_ORIGINS  -- comma-separated CORS origins. Defaults cover the deployed
+#                       Firebase Hosting URLs + http://localhost:5173.
+#   DOCS_ENABLED     -- expose /docs, /redoc, /openapi.json. Defaults to false
+#                       (production-safe); set to true for local dev.
 ```
 
 Backend requires GCP credentials for Vertex AI Gemini. For local development, configure application default credentials or a service account key. In production, Cloud Run's service account (with "Vertex AI User" role) provides implicit auth.
+
+## Security Posture
+
+The Cloud Run service is unauthenticated (`roles/run.invoker = allUsers`) so the public site can call it without API keys leaking through the SvelteKit bundle. Defenses in depth:
+
+- **Per-IP rate limit on `/api/v1/generate`** via `slowapi`: **5 requests/minute and 50 requests/day** per client IP. Exceeding either returns HTTP 429 with a JSON `RATE_LIMIT_EXCEEDED` body. The IP key honours `X-Forwarded-For` (Cloud Run forwards the real client IP there). The health and templates endpoints are unrate-limited.
+- **CORS allowlist** driven by `ALLOWED_ORIGINS`. Production default: `https://synthetic-student-gen.web.app`, `https://synthetic-student-gen.firebaseapp.com`, `http://localhost:5173`.
+- **Interactive docs disabled in production.** `DOCS_ENABLED=false` (default) hides `/docs`, `/redoc`, and `/openapi.json`.
+- **Budget alert** is configured separately in GCP as a backstop.
+
+Rate-limit state lives in process memory (single Cloud Run instance is the assumed deployment topology); cold starts reset counters. That is acceptable for the stated cost-protection goal.
 
 ## Project Documentation
 
