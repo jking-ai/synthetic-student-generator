@@ -54,7 +54,7 @@ deploy_backend() {
         --project "$GCP_PROJECT" \
         --service-account "$SERVICE_ACCOUNT" \
         --allow-unauthenticated \
-        --set-env-vars="GCP_PROJECT_ID=${GCP_PROJECT},GCP_REGION=${GCP_REGION},GEMINI_MODEL=gemini-2.5-flash" \
+        --set-env-vars="GCP_PROJECT_ID=${GCP_PROJECT},GCP_REGION=${GCP_REGION},GEMINI_MODEL=gemini-3.1-pro-preview" \
         --memory 512Mi \
         --cpu 1 \
         --min-instances 0 \
