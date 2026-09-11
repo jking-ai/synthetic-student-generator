@@ -6,6 +6,7 @@ from pydantic_settings import BaseSettings
 
 
 _DEFAULT_ALLOWED_ORIGINS = (
+    "https://synthetic-student-gen.jking.ai,"
     "https://synthetic-student-gen.web.app,"
     "https://synthetic-student-gen.firebaseapp.com,"
     "http://localhost:5173"
